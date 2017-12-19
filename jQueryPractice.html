@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery Practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".hidemeb").click(function(){
+          $("#hideme").hide();
+        }); //this is for the hide
+        
+        $(".showme").click(function(){
+          $("#hideme").show();
+        }); // this is for the show
+
+        $(".slideup").click(function(){
+          $("#hideme").slideUp();
+          console.log("executing the click function");
+        }); // this is for the slideUp
+
+        
+        $(".slidedown").click(function(){
+          $("#hideme").slideDown("slow", function(){
+          }); // end of slideDown
+        }); // end of click slideDown
+
+        
+        $(".fadein").click(function(){
+          $("#fadetext").fadeIn();
+        }); // this is for the fadeIn
+
+        $(".fadeout").click(function(){
+          $("#fadetext").fadeOut();
+        }); // this is for the fadeOut
+
+        $(".toggleb").click(function(){
+          $("#toggletext").toggle();
+        });
+
+        $(".toggleslideb").click(function(){
+          $("#text1").slideToggle();
+        });
+
+
+      }); // this is the ending parens for the document
+    </script>
+  </head>
+  <body>
+    <button class="hidemeb">Hide Me</button>
+    <button class="showme">Show Me</button>
+    <button class="slideup">Slide Up</button>
+    <button class="slidedown">Slide Down</button>
+    <button class="fadein">Fade In</button>
+    <button class="fadeout">Fade Out</button>
+    <button class="toggleb">Toggle</button>
+    <button class="toggleslideb">Toggle Slide</button>
+    <p id="hideme">hide me!!!!!!</p>
+    <p id="slidemedown">slide me text</p>
+    <p id="fadetext">This is the text that will fade in and out</p>
+    <p id="toggletext">This is the text that should toggle</p>
+    <p id="text1">This is the text that should toggle when button is slid</p>
+    <!-- The followiing is for toggle 
+    <button id="target">
+      Click here to toggle the text below
+    </button>
+    <p id="toggleme1">this is the first text that gets toggled</p>
+    <p id="toggleme2">this is the second text that gets toggled</p>
+  -->
+    
+  </body>
+</html>
